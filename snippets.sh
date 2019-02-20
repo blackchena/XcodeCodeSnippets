@@ -3,7 +3,7 @@
 set -e
 
 GitRoot="`dirname \"$0\"`"
-Prefix="sst_"
+Prefix="bla_"
 SnippetsDir="${HOME}/Library/Developer/Xcode/UserData/CodeSnippets"
 
 if [ ! -d "${SnippetsDir}" ]; then
@@ -31,7 +31,7 @@ case "$1" in
         echo Importing...
         pushd .
         cd ${GitRoot}
-        cp "${SnippetsDir}/${Prefix}*.codesnippet" .
+        cp ${SnippetsDir}/${Prefix}*.codesnippet .
         ./bin/snippetimporter "${SnippetsDir}" . ${Prefix}
         popd
         ;;
