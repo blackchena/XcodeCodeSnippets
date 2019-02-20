@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>test_view</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>+ (void)load {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appLaunded) name:UIApplicationDidFinishLaunchingNotification object:nil];
+}
+
++ (void)appLaunded {
+    &lt;#Class#&gt; *view = &lt;#initial#&gt;
+    [[UIApplication sharedApplication].keyWindow addSubview:view];
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>FC79A915-7788-4E75-942C-A184DC79D0D9</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Add a special view on the window at launch.</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>TestView</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

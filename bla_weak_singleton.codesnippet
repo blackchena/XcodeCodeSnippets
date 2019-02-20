@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>weak_singleton</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>+ (instancetype)weakSingleton {
+    static __weak &lt;#class#&gt; *weakSingleton;
+    &lt;#class#&gt; *singleton = weakSingleton;
+    @synchronized (self) {
+        if (singleton == nil) {
+            singleton = [[[self class] alloc] init];
+            weakSingleton = singleton;
+        }
+    }
+    return singleton;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>D670C458-8355-41A4-95A7-B3BB3AAF5D3F</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Weak Singleton</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Weak Singleton</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
